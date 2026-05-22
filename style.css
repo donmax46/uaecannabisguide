@@ -409,24 +409,67 @@ background:#229ED9;
 
   background-position:center;
 
-}.flowers-img{
+/* FLOWERS */
 
-  background-image:
-  url('assets/products/flowers.jpg');
+.flowers-img{
 
-}.hashish-img{
+  background:
+    linear-gradient(rgba(0,0,0,0.12),rgba(0,0,0,0.15)),
+    url('https://images.unsplash.com/photo-1603909223429-69bb7101f420?q=80&w=1200&auto=format&fit=crop');
 
-  background-image:
-  url('assets/products/hashish.jpg');
+  background-size:cover;
+  background-position:center;
 
-}.oils-img{
+}
 
-  background-image:
-  url('assets/products/oils.jpg');
+/* HASHISH */
 
-}.vapes-img{
+.hashish-img{
 
-  background-image:
-  url('assets/products/vapes.jpg');
+  background:
+    linear-gradient(rgba(0,0,0,0.12),rgba(0,0,0,0.15)),
+    url('https://images.unsplash.com/photo-1603985529862-9d7d8f2f2c74?q=80&w=1200&auto=format&fit=crop');
+
+  background-size:cover;
+  background-position:center;
+
+}
+
+/* OILS */
+
+.oils-img{
+
+  background:
+    linear-gradient(rgba(0,0,0,0.12),rgba(0,0,0,0.15)),
+    url('https://images.unsplash.com/photo-1585435557343-3b092031d4f7?q=80&w=1200&auto=format&fit=crop');
+
+  background-size:cover;
+  background-position:center;
+
+}
+
+/* VAPES */
+
+.vapes-img{
+
+  background:
+    linear-gradient(rgba(0,0,0,0.12),rgba(0,0,0,0.15)),
+    url('https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=1200&auto=format&fit=crop');
+
+  background-size:cover;
+  background-position:center;
+
+}
+
+/* EDIBLES */
+
+.edibles-img{
+
+  background:
+    linear-gradient(rgba(0,0,0,0.12),rgba(0,0,0,0.15)),
+    url('https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?q=80&w=1200&auto=format&fit=crop');
+
+  background-size:cover;
+  background-position:center;
 
 }
