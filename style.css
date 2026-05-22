@@ -5,7 +5,7 @@ box-sizing:border-box;
 }
 
 body{
-background:#f5fff7;
+background:#f7fff8;
 color:#1e1e1e;
 font-family:'Inter',sans-serif;
 overflow-x:hidden;
@@ -16,33 +16,32 @@ scroll-behavior:smooth;
 }
 
 .topbar{
-text-align:center;
-padding:12px;
 background:#5fa777;
 color:#fff;
+text-align:center;
+padding:12px;
 font-size:12px;
 font-weight:700;
 letter-spacing:2px;
 }
 
 .navbar{
-width:100%;
 display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
 gap:15px;
 padding:20px;
-background:#ffffffee;
+background:#ffffffef;
 position:sticky;
 top:0;
 z-index:999;
 backdrop-filter:blur(10px);
-border-bottom:1px solid rgba(95,167,119,0.15);
+border-bottom:1px solid rgba(95,167,119,0.12);
 }
 
 .logo{
-font-size:1.5rem;
+font-size:1.6rem;
 font-weight:800;
 color:#2f7d4f;
 }
@@ -52,6 +51,8 @@ display:flex;
 gap:18px;
 flex-wrap:wrap;
 justify-content:center;
+position:relative;
+z-index:1000;
 }
 
 nav a{
@@ -59,39 +60,61 @@ text-decoration:none;
 color:#333;
 font-size:14px;
 font-weight:600;
+pointer-events:auto;
 }
 
 .hero{
-padding:80px 20px 60px;
+position:relative;
+padding:120px 20px 100px;
 text-align:center;
+overflow:hidden;
+
 background:
-linear-gradient(rgba(245,255,247,0.85),rgba(245,255,247,0.92)),
-url('https://images.unsplash.com/photo-1603909223429-69bb7101f420?q=80&w=1200&auto=format&fit=crop')
-  center/cover no-repeat;
+linear-gradient(rgba(247,255,248,0.88),
+rgba(247,255,248,0.92)),
+
+url('https://images.unsplash.com/photo-1603909223429-69bb7101f420?q=80&w=1600&auto=format&fit=crop')
+center/cover no-repeat;
+}
+
+.hero-overlay{
+position:absolute;
+inset:0;
+background:
+radial-gradient(circle at center,
+rgba(95,167,119,0.08),
+transparent 60%);
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+max-width:1000px;
+margin:auto;
 }
 
 .mini-title{
 color:#5fa777;
 font-size:12px;
+font-weight:700;
 letter-spacing:3px;
 margin-bottom:20px;
-font-weight:700;
 }
 
 .hero h1{
-font-size:3rem;
-line-height:1.1;
+font-size:3.5rem;
+line-height:1.05;
 margin-bottom:25px;
 color:#2f7d4f;
 }
 
 .hero-description{
-max-width:750px;
-margin:auto;
-line-height:1.9;
+line-height:2;
 font-size:1rem;
 color:#444;
-margin-bottom:35px;
+max-width:850px;
+margin:auto;
+margin-bottom:40px;
 }
 
 .hero-buttons{
@@ -120,129 +143,168 @@ font-weight:700;
 }
 
 section{
-padding:70px 20px;
+padding:80px 20px;
 }
 
 .section-title{
+font-size:2rem;
+margin-bottom:35px;
 text-align:center;
-font-size:1.7rem;
-margin-bottom:45px;
 color:#2f7d4f;
 font-weight:800;
 }
 
+.article-section{
+max-width:1100px;
+margin:auto;
+}
+
+.article-text{
+display:flex;
+flex-direction:column;
+gap:25px;
+}
+
+.article-text p{
+line-height:2;
+color:#444;
+font-size:1rem;
+}
+
+.image-banner{
+height:320px;
+margin:20px;
+border-radius:30px;
+overflow:hidden;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+
+background:
+linear-gradient(rgba(0,0,0,0.35),
+rgba(0,0,0,0.45)),
+
+url('https://images.unsplash.com/photo-1603985529862-9d7d8f2f2c74?q=80&w=1400&auto=format&fit=crop')
+center/cover no-repeat;
+}
+
+.banner-content{
+padding:30px;
+color:#fff;
+}
+
+.banner-content h2{
+font-size:2rem;
+margin-bottom:20px;
+}
+
 .card-grid{
-
-  display:grid;
-
-  gap:28px;
-
-  max-width:1100px;
-
-  margin:auto;
-
+display:grid;
+grid-template-columns:1fr;
+gap:25px;
+max-width:1100px;
+margin:auto;
 }
 
 .info-card{
-
-  background:#ffffff;
-
-  border-radius:26px;
-
-  border:1px solid rgba(95,167,119,0.10);
-
-  box-shadow:
-    0 8px 24px rgba(95,167,119,0.05);
-
-  overflow:hidden;
-
-  padding:32px 28px;
-
-  display:flex;
-
-  flex-direction:column;
-
-  justify-content:flex-start;
-  
-  min-height:220px;
-  
+background:#fff;
+border-radius:24px;
+overflow:hidden;
+border:1px solid rgba(95,167,119,0.12);
+box-shadow:
+0 8px 24px rgba(95,167,119,0.05);
 }
 
-.info-card h3{
-
-  color:#2f7d4f;
-
-  font-size:1.9rem;
-
-  line-height:1.2;
-
-  margin-bottom:18px;
-
-  font-weight:800;
-
+.card-image{
+height:220px;
+background-size:cover;
+background-position:center;
 }
 
-.info-card p{
-
-  color:#555;
-
-  line-height:1.8;
-
-  font-size:1.05rem;
-
+.flowers-img{
+background-image:url('https://images.unsplash.com/photo-1603909223429-69bb7101f420?q=80&w=1200&auto=format&fit=crop');
 }
 
-.info-card h3{
+.hashish-img{
+background-image:url('https://images.unsplash.com/photo-1603985529862-9d7d8f2f2c74?q=80&w=1200&auto=format&fit=crop');
+}
+
+.oils-img{
+background-image:url('https://images.unsplash.com/photo-1585435557343-3b092031d4f7?q=80&w=1200&auto=format&fit=crop');
+}
+
+.vapes-img{
+background-image:url('https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=1200&auto=format&fit=crop');
+}
+
+.info-content{
+padding:26px;
+}
+
+.info-content h3{
 margin-bottom:15px;
 color:#2f7d4f;
+font-size:1.4rem;
 }
 
-.info-card p{
-line-height:1.8;
+.info-content p{
+line-height:1.9;
 color:#555;
 }
 
+.full-image-section{
+height:380px;
+margin:20px;
+border-radius:30px;
+overflow:hidden;
+display:flex;
+justify-content:center;
+align-items:center;
+
+background:
+linear-gradient(rgba(0,0,0,0.35),
+rgba(0,0,0,0.45)),
+
+url('https://images.unsplash.com/photo-1603909594094-6d1d4f5f7e4a?q=80&w=1600&auto=format&fit=crop')
+center/cover no-repeat;
+}
+
+.full-overlay{
+padding:30px;
+text-align:center;
+color:#fff;
+}
+
+.full-overlay h2{
+font-size:2.2rem;
+}
+
 .faq-box{
-max-width:900px;
-margin:auto;
 background:#fff;
+border-radius:24px;
 padding:35px;
-border-radius:22px;
+max-width:950px;
+margin:auto;
 border:1px solid rgba(95,167,119,0.12);
 }
 
 .faq-box h3{
 margin-top:20px;
-margin-bottom:10px;
+margin-bottom:12px;
 color:#2f7d4f;
 }
 
 .faq-box p{
-line-height:1.8;
+line-height:1.9;
 color:#555;
 }
 
-.page-section{
-padding:80px 20px;
-max-width:900px;
-margin:auto;
-}
-
-.page-section h1{
-margin-bottom:30px;
-color:#2f7d4f;
-}
-
-.page-section p{
-line-height:1.9;
-color:#444;
-}
-
 footer{
-text-align:center;
-padding:50px 20px;
 background:#5fa777;
-margin-top:30px;
+padding:50px 20px;
+text-align:center;
+margin-top:40px;
 }
 
 footer h2{
@@ -278,394 +340,12 @@ background:#229ED9;
 
 @media(min-width:768px){
 
-  .card-grid{
-
-    grid-template-columns:
-    repeat(3,minmax(0,1fr));
-
-  }
-
-  .hero h1{
-
-    font-size:4.5rem;
-
-  }
-
-
-}.image-banner{
-
-  height:320px;
-
-  margin:30px 20px;
-
-  border-radius:30px;
-
-  overflow:hidden;
-
-  display:flex;
-
-  justify-content:center;
-
-  align-items:center;
-
-  text-align:center;
-
-  background:
-    linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.45)),
-    url('https://images.unsplash.com/photo-1603909594094-6d1d4f5f7e4a?q=80&w=1400&auto=format&fit=crop')
-    center/cover no-repeat;
-
+.hero h1{
+font-size:5rem;
 }
 
-.image-overlay{
-
-  padding:30px;
-
-  color:#fff;
-
+.card-grid{
+grid-template-columns:repeat(3,1fr);
 }
-
-.image-overlay h2{
-
-  font-size:2rem;
-
-  margin-bottom:20px;
-
-}
-
-.image-overlay p{
-
-  max-width:650px;
-
-  line-height:1.8;
-
-.card-image{
-
-  height:190px;
-
-  width:100%;
-
-  background:
-    linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.15)),
-    url('https://images.unsplash.com/photo-1603985529862-9d7d8f2f2c74?q=80&w=1200&auto=format&fit=crop')
-    center center/cover no-repeat;
-
-}
-
-}.mini-gallery{
-
-  display:grid;
-
-  grid-template-columns:1fr 1fr 1fr;
-
-  gap:15px;
-
-  padding:20px;
-
-}
-
-.gallery-img{
-
-  height:140px;
-
-  border-radius:20px;
-
-  background:
-    linear-gradient(rgba(0,0,0,0.15),rgba(0,0,0,0.15)),
-    url('https://images.unsplash.com/photo-1603909223429-69bb7101f420?q=80&w=1200&auto=format&fit=crop')
-    center/cover no-repeat;
-
-}@media(max-width:768px){
-
-  .info-card{
-
-    padding:28px 24px;
-
-  }
-
-  .info-card h3{
-
-    font-size:1.55rem;
-
-  }
-
-  .info-card p{
-
-    font-size:1rem;
-
-  }
-
-}.shop-image{
-
-  height:220px;
-
-  width:100%;
-
-  border-radius:18px;
-
-  margin-bottom:22px;
-
-  background-size:cover;
-
-  background-position:center;
-
-/* FLOWERS */
-
-.flowers-img{
-
-  background:
-    linear-gradient(rgba(0,0,0,0.12),rgba(0,0,0,0.15)),
-    url('https://images.unsplash.com/photo-1603909223429-69bb7101f420?q=80&w=1200&auto=format&fit=crop');
-
-  background-size:cover;
-  background-position:center;
-
-}
-
-/* HASHISH */
-
-.hashish-img{
-
-  background:
-    linear-gradient(rgba(0,0,0,0.12),rgba(0,0,0,0.15)),
-    url('https://images.unsplash.com/photo-1603985529862-9d7d8f2f2c74?q=80&w=1200&auto=format&fit=crop');
-
-  background-size:cover;
-  background-position:center;
-
-}
-
-/* OILS */
-
-.oils-img{
-
-  background:
-    linear-gradient(rgba(0,0,0,0.12),rgba(0,0,0,0.15)),
-    url('https://images.unsplash.com/photo-1585435557343-3b092031d4f7?q=80&w=1200&auto=format&fit=crop');
-
-  background-size:cover;
-  background-position:center;
-
-}
-
-/* VAPES */
-
-.vapes-img{
-
-  background:
-    linear-gradient(rgba(0,0,0,0.12),rgba(0,0,0,0.15)),
-    url('https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=1200&auto=format&fit=crop');
-
-  background-size:cover;
-  background-position:center;
-
-}
-
-/* EDIBLES */
-
-.edibles-img{
-
-  background:
-    linear-gradient(rgba(0,0,0,0.12),rgba(0,0,0,0.15)),
-    url('https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?q=80&w=1200&auto=format&fit=crop');
-
-  background-size:cover;
-  background-position:center;
-
-}/* ARTICLE SECTION */
-
-.article-section{
-
-max-width:1100px;
-margin:auto;
-padding:80px 20px;
-
-}
-
-.article-content{
-
-display:flex;
-flex-direction:column;
-gap:30px;
-
-}
-
-.article-content p{
-
-line-height:2;
-font-size:1.02rem;
-color:#444;
-
-}
-
-/* IMAGE BANNER */
-
-.image-banner{
-
-height:340px;
-
-margin:20px;
-
-border-radius:30px;
-
-overflow:hidden;
-
-display:flex;
-justify-content:center;
-align-items:center;
-
-text-align:center;
-
-background:
-linear-gradient(rgba(0,0,0,0.35),
-rgba(0,0,0,0.45)),
-
-url('https://images.unsplash.com/photo-1603909223429-69bb7101f420?q=80&w=1400&auto=format&fit=crop')
-center/cover no-repeat;
-
-}
-
-.banner-overlay{
-
-padding:30px;
-color:#fff;
-
-}
-
-.banner-overlay h2{
-
-font-size:2rem;
-margin-bottom:20px;
-
-}
-
-/* FULL IMAGE SECTION */
-
-.full-image-section{
-
-height:400px;
-
-margin:30px 20px;
-
-border-radius:30px;
-
-overflow:hidden;
-
-display:flex;
-justify-content:center;
-align-items:center;
-
-background:
-linear-gradient(rgba(0,0,0,0.3),
-rgba(0,0,0,0.4)),
-
-url('https://images.unsplash.com/photo-1603985529862-9d7d8f2f2c74?q=80&w=1400&auto=format&fit=crop')
-center/cover no-repeat;
-
-}
-
-.full-overlay{
-
-padding:30px;
-text-align:center;
-color:#fff;
-
-}
-
-.full-overlay h2{
-
-font-size:2.2rem;
-
-}
-
-/* CARD IMAGE SYSTEM */
-
-.card-image{
-
-height:200px;
-
-background-size:cover;
-background-position:center;
-
-}
-
-/* BUILT-IN PRODUCT IMAGES */
-
-.flowers-img{
-
-background-image:
-url('https://images.unsplash.com/photo-1603909223429-69bb7101f420?q=80&w=1200&auto=format&fit=crop');
-
-}
-
-.hashish-img{
-
-background-image:
-url('https://images.unsplash.com/photo-1603985529862-9d7d8f2f2c74?q=80&w=1200&auto=format&fit=crop');
-
-}
-
-.oils-img{
-
-background-image:
-url('https://images.unsplash.com/photo-1585435557343-3b092031d4f7?q=80&w=1200&auto=format&fit=crop');
-
-}
-
-.vapes-img{
-
-background-image:
-url('https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=1200&auto=format&fit=crop');
-
-}
-
-/* INFO CONTENT */
-
-.info-content{
-
-padding:26px;
-
-}
-
-.info-content h3{
-
-margin-bottom:15px;
-color:#2f7d4f;
-
-}
-
-.info-content p{
-
-line-height:1.8;
-color:#555;
-
-nav{
-
-position:relative;
-z-index:1000;
-
-}
-
-nav a{
-
-pointer-events:auto;
-
-}nav{
-
-position:relative;
-z-index:1000;
-
-}
-
-nav a{
-
-pointer-events:auto;
-
-}.hero,
-.image-banner,
-.full-image-section{
-
-position:relative;
-z-index:1;
 
 }
