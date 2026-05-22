@@ -639,4 +639,33 @@ color:#2f7d4f;
 line-height:1.8;
 color:#555;
 
+nav{
+
+position:relative;
+z-index:1000;
+
+}
+
+nav a{
+
+pointer-events:auto;
+
+}nav{
+
+position:relative;
+z-index:1000;
+
+}
+
+nav a{
+
+pointer-events:auto;
+
+}.hero,
+.image-banner,
+.full-image-section{
+
+position:relative;
+z-index:1;
+
 }
